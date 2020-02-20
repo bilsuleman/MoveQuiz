@@ -5,7 +5,7 @@ using namespace std;
 
 square makeSquare()
 {
-	square aSquare(5);
+	square aSquare(10);
 	return aSquare;
 }
 int main()

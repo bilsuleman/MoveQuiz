@@ -29,6 +29,7 @@ square::square(int input)
 
 square& square::operator=(square&& right)
 {
+	cout << "Move Assignment Running." << endl;
 	if (this != &right) {
 		swap(a, right.a);
 	}
@@ -37,12 +38,14 @@ square& square::operator=(square&& right)
 
 square::square(square&& temp)
 {
+	cout << "Move Constructor Running." << endl;
 	this->a = temp.a;
 	temp.a = 0;
 }
 
 square::~square()
 {
+	cout << "Destructor Running." << endl;
 }
 
 int square::setA(int input)
